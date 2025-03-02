@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Scrollbar on body */
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/bg-blue.png) no-repeat fixed ;
+  background-size: cover;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+header {
+  background:linear-gradient(to right, rgb(0, 38, 141),rgb(255, 196, 0), rgb(8, 0, 83));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 5px 0 black;
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 15px;
+  right: 0;
+}
+
+header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight:bold;
+}
+
+header img.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+header h3.os {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+}
+
+header h3.os a{
+  color: white;
+  text-decoration: none;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.burger {
+  display: block !important;
+  cursor: pointer;
+  margin: 0 15px;
+  font-size: 24px;
+}
+
+h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 36px;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  padding-bottom: 20px; /* Space at the bottom */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.profile{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-top: 55px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.profile:hover{
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+.logout {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid black;
+
+}
+
+.logout:hover {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+.container {
+  position: relative;
+  background-color: whitesmoke;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+.logo-2 {
+  position: absolute;
+  margin-top: 5vh;
+  top: 0px; /* Adjust this value to control how much it floats */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px; /* Adjust height as needed */
+  width: auto;
+  z-index: 2;
+}
+
+
+.container h1{
+  margin-top: 0;
+  padding-top: 10px;
+
+}
+
+
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, rgb(0, 9, 87), rgb(52, 76, 183));
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: white;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}

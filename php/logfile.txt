@@ -1,0 +1,19 @@
+[2025-02-26 10:27:10] Database error: Cannot add or update a child row: a foreign key constraint fails (`db_nuos`.`tbl_user`, CONSTRAINT `student_id3` FOREIGN KEY (`student_id`) REFERENCES `tbl_std` (`student_id`))
+[2025-02-26 10:29:37] New user registered: aro@students.nu-fairview.edu.ph (Student ID: 123)
+[2025-02-26 10:42:38] New user registered: akira@students.nu-fairview.edu.ph (Student ID: 2023-133013)
+[2025-02-26 10:43:05] New user registered: akira@students.nu-fairview.edu.ph (Student ID: 2023133013)
+[2025-02-26 10:49:05] New user registered: akira@students.nu-fairview.edu.ph (Student ID: 2023133013)
+[2025-02-26 16:23:03] Database error: Cannot add or update a child row: a foreign key constraint fails (`db_nuos`.`tbl_std`, CONSTRAINT `year_id` FOREIGN KEY (`year_id`) REFERENCES `tbl_yearlvl` (`year_id`))
+[2025-02-26 16:25:13] Invalid email format: aro@students.nu-farview.edu.ph
+[2025-02-26 16:26:03] Database error: Cannot add or update a child row: a foreign key constraint fails (`db_nuos`.`tbl_std`, CONSTRAINT `year_id` FOREIGN KEY (`year_id`) REFERENCES `tbl_yearlvl` (`year_id`))
+[2025-02-26 16:27:15] Database error: Cannot add or update a child row: a foreign key constraint fails (`db_nuos`.`tbl_std`, CONSTRAINT `year_id` FOREIGN KEY (`year_id`) REFERENCES `tbl_yearlvl` (`year_id`))
+[2025-02-26 16:29:06] New user registered: testing@students.nu-fairview.edu.ph (Student ID: 2023133013)
+[2025-02-27 00:02:20] Failed login attempt for: platillahar@gmail.com
+[2025-02-27 00:03:55] Failed login attempt for: platillahar@students.nu-fairview.edu.ph
+[2025-02-27 00:05:37] Database error: Cannot add or update a child row: a foreign key constraint fails (`db_nuos_final`.`tbl_std`, CONSTRAINT `year_id` FOREIGN KEY (`year_id`) REFERENCES `tbl_yearlvl` (`year_id`))
+[2025-02-27 00:08:53] Failed login attempt for: platillahar@students.nu-fairview.edu.ph
+[2025-02-27 00:09:40] New user registered: aro@students.nu-fairview.edu.ph (Student ID: 2023133013, User ID: 8)
+[2025-02-27 06:33:41] Invalid email format: marlantonio177@gmail.com
+[2025-02-27 06:33:49] Failed login attempt for: marlantonio177@gmail.com
+[2025-02-27 06:33:57] Failed login attempt for: marlantonio177@gmail.com
+[2025-02-27 08:16:40] New user registered: mitchnazharo@students.nu-fairview.edu.ph (Student ID: 2023133014, User ID: 9)

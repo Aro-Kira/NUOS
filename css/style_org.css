@@ -1,0 +1,314 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  background: url(../images/bg-yellow.png) no-repeat center center fixed;
+  background-size: cover;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+header {
+  background:linear-gradient(to right, rgb(0, 38, 141),rgb(255, 196, 0), rgb(8, 0, 83));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 5px 0 black;
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 15px;
+  right: 0;
+}
+
+header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight:bold;
+}
+
+header img.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+header h3.os {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+}
+
+header h3.os a{
+  color: white;
+  text-decoration: none;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.burger {
+  display: block !important;
+  cursor: pointer;
+  margin: 0 15px;
+  font-size: 24px;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  padding-bottom: 20px; /* Space at the bottom */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.profile{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-top: 55px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.profile:hover{
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+.logout {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid black;
+
+}
+
+.logout:hover {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+
+
+/* Main Container */
+.container {
+    margin-top: 5vh;
+    padding: 5vh;
+    margin-left: 5vh;
+}
+
+
+.type-acad {
+  background-color: white;
+  border-radius: 10px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.233);
+}
+
+.type-non-acad{
+  background-color: white;
+  border-radius: 10px;
+    left: 0;
+    right: 0;
+   
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: start;
+  color: rgb(31, 31, 31);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /*  6 columns */
+    gap: 40px;
+}
+
+/* Responsive Grid (For smaller screens) */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    }
+}
+
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    position: relative; 
+    height: 300px;
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.575);
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.card-label {
+    position: absolute;
+    background-color: rgb(255, 217, 0);
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;  
+    opacity: 0;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover .card-label {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+
+.card:hover{
+  transform: scale(1.1) translateY(-10px);
+  z-index: 1;
+}
+
+/* Placeholder Image */
+.card img {
+    width: 100%;
+    height: 90%;
+    object-fit: fill;
+    background-color: #c2c2c2;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    z-index: 2;
+}
+
+
+/* Join Button */
+.join-btn {
+  width: 100%;
+  background:linear-gradient(to right, rgb(0, 60, 224), rgb(18, 0, 182));
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.join-btn:hover {
+  background:linear-gradient(to right, rgb(38, 96, 255), rgb(38, 14, 255));
+ 
+}
+
+
+
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, rgb(0, 9, 87), rgb(52, 76, 183));
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: white;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}

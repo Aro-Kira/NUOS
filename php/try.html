@@ -1,0 +1,56 @@
+<!-- Upcoming Events Section -->
+<div class="upcoming-events-container">
+    <h3>Upcoming Events</h3>
+    <ul id="event-list">
+        <li id="no-events-message"><i class="fa fa-calendar" aria-hidden="true"></i> No events added yet.</li>
+    </ul>
+</div>
+
+<script>
+    function addEvent(eventName) {
+        const eventList = document.getElementById("event-list");
+        const noEventsMessage = document.getElementById("no-events-message");
+
+        // Hide "No events added yet" message if events exist
+        if (noEventsMessage) {
+            noEventsMessage.style.display = "none";
+        }
+
+        // Create new event item
+        const li = document.createElement("li");
+        li.innerHTML = `<i class="fa fa-calendar" aria-hidden="true"></i> ${eventName} 
+                        <button class="delete-btn" onclick="deleteEvent(this)">Delete</button>`;
+        
+        eventList.appendChild(li);
+    }
+
+    function deleteEvent(button) {
+        const eventList = document.getElementById("event-list");
+        const li = button.parentElement;
+        li.remove();
+
+        // Show "No events added yet" message if list is empty
+        if (eventList.children.length === 0) {
+            const noEventsMessage = document.createElement("li");
+            noEventsMessage.id = "no-events-message";
+            noEventsMessage.innerHTML = `<i class="fa fa-calendar" aria-hidden="true"></i> No events added yet.`;
+            eventList.appendChild(noEventsMessage);
+        }
+    }
+</script>
+
+<style>
+    .delete-btn {
+        margin-left: 10px;
+        padding: 2px 5px;
+        border: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .delete-btn:hover {
+        background-color: darkred;
+    }
+</style>
